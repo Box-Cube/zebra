@@ -1,0 +1,24 @@
+# permissions for end users to edit cpsmigrates.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cpsmigrate-editor-role
+rules:
+- apiGroups:
+  - zebra.boxcube.io
+  resources:
+  - cpsmigrates
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zebra.boxcube.io
+  resources:
+  - cpsmigrates/status
+  verbs:
+  - get

@@ -1,0 +1,14 @@
+apiVersion: zebra.boxcube.io/v1alpha1
+kind: CpsMigrate
+metadata:
+  name: cpsmigrate-sample
+spec:
+  # Add fields here
+  includedNamespaces: nginx-demo
+  includeKind:
+    - Deployment
+    - Service
+    - ConfigMap
+    - StatefulSet
+    - PersistentVolumeClaim
+  targetUrl: "https://xxxx"

@@ -1,0 +1,16 @@
+domain: boxcube.io
+layout:
+- go.kubebuilder.io/v3
+projectName: zebra
+repo: github.com/boxcube/zebra
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: boxcube.io
+  group: zebra
+  kind: CpsMigrate
+  path: github.com/boxcube/zebra/api/v1alpha1
+  version: v1alpha1
+version: "3"

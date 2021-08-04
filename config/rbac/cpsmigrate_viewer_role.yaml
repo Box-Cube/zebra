@@ -1,0 +1,20 @@
+# permissions for end users to view cpsmigrates.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cpsmigrate-viewer-role
+rules:
+- apiGroups:
+  - zebra.boxcube.io
+  resources:
+  - cpsmigrates
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - zebra.boxcube.io
+  resources:
+  - cpsmigrates/status
+  verbs:
+  - get
